@@ -5,29 +5,60 @@
     <title>cac file nháp</title>
 </head>
 <body>
-<ul style="list-style: disc">
-    <li> VIỆT NAM<BR>
-    <ol style="1"><li>Hà Nội</li>
-    <li> Sài Gòn</li>
-    <li>Huế</li>
-        <li>Đà Nẵng</li>
-    </ol></li>
-    <LI> HOA KỲ <br>
-    <ol style="1">
-        <li>New York</li>
-        <li>Los Angeles</li>
-        <li>Chicago</li>
-        <li>Houston</li>
-    </ol></LI>
-    <LI> TRUNG QUỐC<br>
-    <ol style="1">
-        <li>Beijing</li>
-        <li>Chongqing</li>
-        <li>Shanghai</li>
-        <li>Tianjin</li>
-    </ol>
-    </LI>
-</ul>
-
+<form action="http://google.com.vn/"> first name: <br>
+<input type="text" name="" value="" >
+    <br>Last Name:<br>
+    <input type="text" name="" value=""><br>
+ Date:<br>
+<input type="date"> <br>
+<input type="submit" value="gửi"></form>
+<hr>
+<form action="https://www.google.com.vn/">
+    <input type="text" name="q"/>
+    <input type="submit" value="Tìm kiếm"/>
+</form>
+<hr>
+<form action="/action_page.php">
+    First name:<br>
+    <input type="text" name="First Name" value="Mickey"><br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<hr>
+<form action="/action_page.php" method="post">
+    <fieldset>
+        <legend> Personal information:</legend>
+        First Name:<br>
+        <input type="text" name="First Name" value=""><br>
+        Last Name:<br>
+        <input type="text" name="First Name" value=""><br>
+        <input type="submit" value="submit">
+    </fieldset>
+</form>
+<hr>
+<form action="action_page.php" method="post"> Account:<br>
+   <input name="Account" type="text"><br>
+    Password:<br>
+    <input name="Pass" type="text"><br>
+    <input type="submit" value="login">
+</form>
+<hr>
+<form action="index.php" method="post">
+    Sở thích:<br>
+    <label> <input name="hobdy" value="travel" type="checkbox"> Du lịch</label><br>
+    <label><input name="hobby" value="sport" type="checkbox"> Thể thao</label><br>
+    <label><input name="Hobby" value="cooking" type="checkbox"> Nấu Ăn</label><br>
+    <button type="button"><img src="../anh/anh-girl-xinh-de-thuong-nhat-nam-2017-12-600x800.jpg" height="80"
+                               width="60"/></button>
+    <hr>
+    <form method="get">
+        Sở Thích:<br>
+        <label><input name="Hobby" value="Travel" type="radio"> Du lịch</label><br>
+        <label><input name="Hobby" value="Sport" type="radio"> Thể thao</label><br>
+        <label><input name="Hobby" value="Cooking" type="radio"> Nấu ăn</label><br>
+        <input type="button" value="">
+    </form>
+</form>
 </body>
 </html>
