@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo Form Survay Khách hàng</title>
+    <style type="text/css">
+        table, th, td{
+            border:1px solid #868585;
+        }
+        table{
+            border-collapse:collapse;
+            width:50%;
+        }
+        th, td{
+            text-align:center;
+            padding:10px;
+        }
+        table tr:nth-child(odd){
+            background-color:#eee;
+        }
+        table tr:nth-child(even){
+            background-color:white;
+        }
+        table tr:nth-child(1){
+            background-color:skyblue;
+        }
+        .box{br input name="damua" value="" type="checkbox">"
+        }
+    </style>
+</head>
+<body>
+    <hr>
+    <h1>Market Research Survey</h1>
+    <h3>Please take a few moments to complete this satisfaction survey.</h3>
+    <div>
+        <form> What is your age range?<br>
+            <label>
+                <select name="tuoi">
+                    <option value="">18 - 24</option>
+                    <option value="">25 - 34</option>
+                    <option value="">35 - 50</option>
+                    <option value="">50+</option>
+                </select>
+            </label>
+        </form>
+    </div><br>
+    <div>
+        <form> What is your yearly income range?<br>
+            <label>
+                <select name="thunhap">
+                    <option value="">$0 - $25,000</option>
+                    <option value="">$25,001 - $50,000</option>
+                    <option value="">$50,001 - $100,000</option>
+                    <option value="">$100,000++ </option>
+                </select>
+            </label>
+        </form>
+    </div><br>
+    <div>
+        <form> Gender Identity?
+            <label><br>
+                <input name="giơitinh" value="" type="radio">Male</label>
+            <label><br>
+                <input name="giơitinh" value="" type="radio">FiMale</label>
+            <label><br>
+                <input name="giơitinh" value="" type="radio">Nonbinary</label>
+            <label><br>
+                <input name="giơitinh" value="" type="radio">Other</label>
+            <label>
+                <br>
+                <input type="text">
+            </label>
+        </form>
+    </div><br>
+    <div>
+        <form>Which of the following products have your purchased in the last 2 months.
+            Please check all that apply?
+            <label><br>
+                <input name="damua" value="" type="checkbox">Product1
+            </label>
+            <label><br>
+                <input name="damua" value="" type="checkbox">Product1
+            </label>
+            <label><br>
+                <input name="damua" value="" type="checkbox">Product1
+            </label>
+        </form>
+    </div><br>
+    <div>
+        <form> How often would you use our new product?
+            <label><br>
+                <input name="sudung" value="" type="radio">Daily</label>
+            <label><br>
+                <input name="sudung" value="" type="radio">Weekly</label>
+            <label><br>
+                <input name="sudung" value="" type="radio">Monthly</label>
+        </form>
+    </div><br>
+    <div>
+        <form>What would you pay for the new product?
+            <br>$
+            <input type="text" value="" name="tratien" size="6">.
+            <input type="text" value="" name="tratien" size="6"><br>
+            Dolar Cents
+        </form>
+    </div>
+    <div>
+        <br>
+        <form>What features would you like to see in the new product?
+            <br>
+            <textarea cols="80%" rows="7"></textarea>
+        </form>
+    </div>
+    <div>
+        <br> khong coppy duoc a
+        <table>
+            <tr>
+                <th>Tên</th>
+                <th>Tuổi</th>
+                <th>Quê</th>
+                <th>alo</th>
+                <th>cmt</th>
+            </tr>
+            <tr>
+                <th>Hương</th>
+                <td>1<br> <input name="damua" value="" type="checkbox"></td>
+                <td>2<br> <input name="damua" value="" type="checkbox"></td>
+                <td>3<br> <input name="damua" value="" type="checkbox"></td>
+                <td>4<br> <input name="damua" value="" type="checkbox"></td>
+            </tr>
+            <tr>
+                <th>Ngọc</th>
+                <td>1<br> <input name="damua" value="" type="checkbox"></td>
+                <td>2<br> <input name="damua" value="" type="checkbox"></td>
+                <td>3<br> <input name="damua" value="" type="checkbox"></td>
+                <td>4<br> <input name="damua" value="" type="checkbox"></td>
+            </tr>
+            <tr>
+                <th>Trâm</th>
+                <td>1<br> <input name="damua" value="" type="checkbox"></td>
+                <td>2<br> <input name="damua" value="" type="checkbox"></td>
+                <td>3<br> <input name="damua" value="" type="checkbox"></td>
+                <td>4<br> <input name="damua" value="" type="checkbox"></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <br>
+        <input type="button" name="Sumit" value="sumit">
+    </div>
+</body>
+</html>
