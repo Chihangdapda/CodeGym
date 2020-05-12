@@ -5,10 +5,14 @@
     <title>Khai báo biến</title>
 </head>
 <body>
+<p id="chia"></p>
 <script>
     let i = 20
     let f = 20.5
     let s = 'hà nội'
+    let a = prompt(('nhap vao so a'));
+    let b = prompt(('nhap vao so b'));
+    let r = a%b;
     let chuvi = i*f
     document.write('i = ' + i);
     document.write('<br>');
@@ -17,7 +21,13 @@
     document.write('s = ' + s);
     document.write('<br');
     document.write('chuvi = ' + chuvi);
-
+    document.write('<hr');
+    if(r === 0){
+        document.getElementById('chia').innerHTML = "a la boi";
+    }
+    else{
+        document.getElementById("chia").innerHTML = "a k la boi";
+    }
 </script>
 </body>
 </html>
