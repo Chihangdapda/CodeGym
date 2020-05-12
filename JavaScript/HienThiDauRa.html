@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hiển Thị Đầu Ra</title>
+</head>
+<body>
+<button type="button" onclick="ShowMessage()";>Click Me</button>
+<script>
+    function ShowMessage() {
+        alert('Xin Chào');
+    }
+</script>
+<hr>
+<div id="MessageDiv"></div>
+    <button type="button" onclick="ShowMessage()";>Click Me2</button>
+    <script>
+        Function ShowMessage(){
+            document.getElementById('MessageDiv').innerHTML = 'Xin Chào!';
+        }
+    </script>
+<hr>
+    <button type="button" onclick="ShowMessage()";>Click Me3</button>
+    <script>
+        Function ShowMessage(){
+            document.write("Xin Chào");
+        }
+    </script>
+<hr>
+    <button type="button" onclick="ShowMessage()";>Click Me4</button>
+<script>
+    Function ShowMessage(){
+        Console.log('Xin Chào');
+    }
+</script>
+</body>
+</html>
