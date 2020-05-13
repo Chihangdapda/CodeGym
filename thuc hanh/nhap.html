@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>nhap</title>
+
 </head>
 <body>
-<p id="chia"></p>
 <script>
-    let a = prompt(('nhap so a'));
-    let b = prompt(('nhap so b'));
-    let r = a%b
-    if(r === 0){
-        document.getElementById("chia").innerHTML = ('a la boi cua b');
-    }
-    else {
-        document.getElementById("chia").innerHTML = ('a khong lal boi cua b');
+    let year = parseInt(prompt("Enter a year"));
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                alert(year + " is a leap year");
+            } else {
+                alert(year + " is NOT a leap year");
+            }
+        } else {
+            alert(year + " is a leap year");
+        }
+    } else {
+        alert(year + " is NOT a leap year");
     }
 </script>
+
 </body>
 </html>

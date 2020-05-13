@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<script>
+    let nam = parseInt(prompt('nhap nam'));
+    if(nam%4 == 0){
+        if(nam%100 == 0){
+            if(nam%400 == 0){
+                alert(nam + "nam nhuan");
+            }else{
+                alert(nam + "nam thuong");
+            }
+        }else{
+            alert(nam + "nam nhuan");
+        }
+    }else{
+        alert(nam + "nam thuong");
+    }
+</script>
+</body>
+</html>
