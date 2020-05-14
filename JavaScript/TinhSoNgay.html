@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Số Ngày Trong Tháng</title>
+</head>
+<body>
+<form>
+    Nhập Tháng:
+    <input id = "input" type="text" placeholder="thang" value=""><br><br>
+    <input type="button" value="số ngày" onclick="ngaytrongthang()">
+    <p id="ketqua"></p>
+    <script>
+        function ngaytrongthang() {
+            let a = parseInt(document.getElementById("input").value);
+
+            switch (a) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById("ketqua").innerHTML= "tháng có 31 ngày";
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById("ketqua").innerHTML = "tháng có 30 ngày";
+                    break;
+                case 2:
+                    document.getElementById("ketqua").innerHTML = "tháng thọt";
+                    break;
+                default:
+                    document.getElementById("ketqua").innerHTML = "F5";
+                    break;
+            }
+        }
+    </script>
+</form>
+</body>
+</html>
