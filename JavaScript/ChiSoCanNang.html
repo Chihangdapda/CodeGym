@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính chỉ số cân nặng</title>
+    <style>
+        body {
+            padding:2% ;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    Cân Nặng:
+    <input id="cannang" type="text" placeholder="kg" value="" min="0"><br><br>
+    Chiều Cao:
+    <input id="chieucao" type="text" placeholder="m" value="" min="0"><br>
+    <input type="button" value="phân loại" onclick="tinhtoan()";/>
+    <p id="ketqua"> </p>
+    <script>
+        function tinhtoan() {
+        let cn = Number(document.getElementById("cannang").value);
+        let cc = Number(document.getElementById("chieucao").value);
+        let ketqua = document.getElementById("ketqua");
+            bmi = cn/(cc*cc);
+
+            if (bmi < 18){
+                ketqua.innerText = "Gầy Quá Con Ơi";
+            } else if (bmi < 25.0){
+                ketqua.innerText = "Nhìn Con Ngon Đấy!";
+            } else if (bmi < 30.0){
+                ketqua.innerText = "Mày Ăn Vừa Thôi";
+            } else {
+                ketqua.innerText = "Không Khác gì Con Heo";
+            }
+        }
+    </script>
+</body>
+</html>
