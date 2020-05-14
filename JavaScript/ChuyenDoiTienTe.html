@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en"
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+    Amount:
+    <input id="amount" value="" min="0">
+    From Currency:
+    <select id="quocgia">
+        <option value="V">VN</option>
+        <option value="L">LAOS</option>
+        <option value="T">THAI</option>
+    </select>
+    To Currency:
+    <select id="tiente">
+        <option value="US">US</option>
+        <option value="EU">EU</option>
+    </select>
+    <input type="button" value="convert" onclick="chuyendoi();">
+    <p id="ketqua"></p> <!--hien thi-->
+    <script>
+        let qg = document.getElementById('quocgia');
+        let tt = document.getElementById('tiente');
+        function chuyendoi() {
+            let a = Number(document.getElementById('amount').value);
+             qg = document.getElementById('quocgia').value;
+             tt = document.getElementById('tiente').value;
+             b = (a/23000);
+             c = (a/30000);
+
+        }
+        if(qg="V",tt="US"){
+            ketqua='b';
+        } else if (qg="V",tt="EU"){
+            ketqua='c';
+        } else if (qg="L",tt="US"){
+            ketqua='b';
+        } else if (qg="L",tt="EU"){
+            ketqua='c';
+        } else if (qg="T",tt="US"){
+            ketqua='b';
+        } else {
+            ketqua='c';
+        }
+    </script>
+</form>
+</body>
+</html>

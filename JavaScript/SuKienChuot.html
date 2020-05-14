@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành sự kiện chuột</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="../anh/1.png" height="20%" width="20%"/>
+    <p> click button below to move ball </p>
+    <input type="button" value="left" onclick="Moverleft();">
+    <input type="button" value="right" onclick="Moveright();">
+
+</form>
+<script>
+    var img = null;
+    img = document.getElementById('myImage');
+        function init() {
+            img = document.getElementById('myImage');
+            img.style.position ='relative';
+            img.style.left ='250px';
+
+        }
+        function Moveright() {
+            img.style.left = parseInt(img.style.left) + 10 + 'px';
+        }
+        function Moverleft(){
+            img.style.left = parseInt(img.style.left) - 10 + 'px';
+        }
+     window.onload = init;
+</script>
+</body>
+</html>
