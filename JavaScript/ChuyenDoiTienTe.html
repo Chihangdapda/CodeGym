@@ -19,32 +19,31 @@
         <option value="US">US</option>
         <option value="EU">EU</option>
     </select>
-    <input type="button" value="convert" onclick="chuyendoi();">
+    <input type="button" value="convert" onclick="chuyendoi()";/>
     <p id="ketqua"></p> <!--hien thi-->
     <script>
         let qg = document.getElementById('quocgia');
         let tt = document.getElementById('tiente');
-        function chuyendoi() {
-            let a = Number(document.getElementById('amount').value);
-             qg = document.getElementById('quocgia').value;
-             tt = document.getElementById('tiente').value;
-             b = (a/23000);
-             c = (a/30000);
+            function chuyendoi() {
+                let a = Number(document.getElementById('amount').value);
+                let qg = document.getElementById('quocgia').value;
+                let tt = document.getElementById('tiente').value;
+                 b = (a/23000);
+                 c = (a/30000);
+            }
+                if(qg == "V" && tt=="US"){
+                    ketqua='b';
+                    } else if (qg=="V" && tt=="EU"){
+                        ketqua='c';
+                        } else if (qg=="L" && tt=="US"){
+                            ketqua='b';
+                            } else if (qg=="L" && tt=="EU"){
+                                ketqua='c';
+                                } else if (qg=="T" && tt=="US"){
+                                    ketqua='b';
+                                    } else (qg=="T" && tt=="EU")
+                                        ketqua='c';
 
-        }
-        if(qg="V",tt="US"){
-            ketqua='b';
-        } else if (qg="V",tt="EU"){
-            ketqua='c';
-        } else if (qg="L",tt="US"){
-            ketqua='b';
-        } else if (qg="L",tt="EU"){
-            ketqua='c';
-        } else if (qg="T",tt="US"){
-            ketqua='b';
-        } else {
-            ketqua='c';
-        }
     </script>
 </form>
 </body>
