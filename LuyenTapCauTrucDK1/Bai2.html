@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhap tuoi:
+    <input id="tuoi" type="text" value="">
+    <input type="button" value="summit" onclick="countAge()">
+    <p id="in"></p>
+</form>
+<script>
+    function countAge() {
+        //alert("test");
+        let a = parseInt(document.getElementById("tuoi").value);
+        if (a > 10){
+             document.getElementById("in").innerHTML = "đi mà học lớp khác";
+         } else if (a < 10){
+             document.getElementById("in").innerHTML = "Chưa đủ tuổi";
+         } else{
+             document.getElementById("in").innerHTML = "ok! come on baby";
+         }
+    }
+</script>
+</body>
+</html>

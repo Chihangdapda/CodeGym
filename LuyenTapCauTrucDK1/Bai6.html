@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhap doanh thu:
+    <input id="dt" type="text" value="">
+    <input type="button" value="summit" onclick="countAge()">
+    <p id="in"></p>
+</form>
+<script>
+    function countAge() {
+        let a = parseInt(document.getElementById("dt").value);
+        hh1 = (a / 100) * 10;
+        hh2 = (a / 100) * 20;
+        hh3 = (a / 100) * 30;
+        if (a >= 100) {
+            document.getElementById("in").innerHTML = hh1;
+        } else if (a <= 100 && a > 50) {
+            document.getElementById("in").innerHTML = hh2;
+        } else if (a <= 50 && a > 0) {
+            document.getElementById("in").innerHTML = hh3;
+
+        } else
+            document.getElementById("in").innerText = 'nhập lại';
+    }
+</script>
+</body>
+</html>
