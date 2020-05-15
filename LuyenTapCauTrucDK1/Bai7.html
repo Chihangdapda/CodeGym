@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<form>
+    số phút nội mạng:
+    <input id="noimang" type="text" value="">
+    Số phút ngoại mạng:
+    <input id="ngoaimang" type="text" value="">
+    <br>
+    <input type="button" value="summit" onclick="giacuoc()">
+    <p id="ketqua"></p>
+</form>
+    <script>
 
+     function giacuoc(){
+         let a = parseInt(document.getElementById("noimang").value);
+         let b = parseInt(document.getElementById("ngoaimang").value);
+         let c = (a*1000)+(b*1500);
+         document.getElementById("ketqua").innerHTML = c;
+     }
+    </script>
 </body>
 </html>
