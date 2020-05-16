@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .switch {
+            position: relative;
+            top: 10px;
+            display: inline-block;
+            width: 100px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <input class="switch" id="good" type="radio" onclick="check1()">Good<br>
+    <input class="switch" id="fast" type="radio" onclick="check2()">Fast<br>
+    <input class="switch" id="cheap" type="radio" onclick="check3()">Cheap<br>
+</form>
+<script>
+    let a = document.getElementById("good");
+    let b = document.getElementById("fast");
+    let c = document.getElementById("chep");
+
+    function check() {
+        if (a === true && c === true) {
+            if (b === true){
+                c = false;
+            }
+        }
+    }
+
+    function check2() {
+        if (a === true && b === true) {
+            if (c === true) {
+                a = false;
+            }
+        }
+    }
+
+    function check3() {
+        if (b === true && c === true) {
+            if (a === true) {
+                b = false;
+            }
+        }
+    }
+</script>
+</body>
+
+</html>
