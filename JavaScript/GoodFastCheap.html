@@ -13,38 +13,39 @@
 </head>
 <body>
 <form>
-    <input class="switch" id="good" type="radio" onclick="check1()">Good<br>
-    <input class="switch" id="fast" type="radio" onclick="check2()">Fast<br>
-    <input class="switch" id="cheap" type="radio" onclick="check3()">Cheap<br>
+    <input class="switch" id="good" type="checkbox" onclick="check1()"/>Good<br>
+    <input class="switch" id="fast" type="checkbox" onclick="check2()"/>Fast<br>
+    <input class="switch" id="cheap" type="checkbox" onclick="check3()"/>Cheap<br>
 </form>
 <script>
-    let a = document.getElementById("good");
-    let b = document.getElementById("fast");
-    let c = document.getElementById("chep");
+    let a = document.getElementById('good');
+    let b = document.getElementById('fast');
+    let c = document.getElementById('cheap');
 
-    function check() {
-        if (a === true && c === true) {
-            if (b === true){
-                c = false;
+    function check1() {
+        if (a.checked === true && c.checked === true) {
+            if (b.checked === true) {
+                c.checked = false;
             }
         }
     }
 
     function check2() {
-        if (a === true && b === true) {
-            if (c === true) {
-                a = false;
+        if (a.checked === true && b.checked === true) {
+            if (c.checked === true) {
+                a.checked = false;
             }
         }
     }
 
     function check3() {
-        if (b === true && c === true) {
-            if (a === true) {
-                b = false;
+        if (b.checked === true && c.checked === true) {
+            if (a.checked === true) {
+                b.checked = false;
             }
         }
     }
+
 </script>
 </body>
 
