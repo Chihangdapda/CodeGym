@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<form>
+    <input id="so" type="text" value="" placeholder="nhập số">
+    <input type="button" value="Summit" onclick="tinhtoan()">
+    <p id="ketqua">
+</form>
+<script>
+    function tinhtoan(){
+    let num = parseInt(document.getElementById("so").value);
+    let total = 0;
+    for (i=1; i <= num; i=i+1){
+        total = total + i;
+        document.getElementById("ketqua").innerHTML = total;
+    }
+    }
+</script>
+</body>
+
+</html>

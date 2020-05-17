@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="so" type="text" value="">
+    <input type="button" value="summit" onclick="tinhtoan()">
+    <p id="ketqua"></p>
+    <p id="ketqua1"></p>
+</form>
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("so").value);
+        let total = 0;
+        while (a !== 1) {
+            let a = parseInt(document.getElementById("so").value);
+            document.getElementById("ketqua").innerHTML = a;
+            total = total + a;
+        }
+        document.getElementById("ketqua1").innerHTML = total;
+    }
+</script>
+</body>
+</html>
