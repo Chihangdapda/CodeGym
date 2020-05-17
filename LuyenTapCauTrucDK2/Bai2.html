@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập Met:
+    <input id="met" type="text" value=""><br>
+    <input type="button" value="summit" onclick="chuyendoi()">
+    <h3>feet:</h3><p id="ketqua"></p>
+</form>
+<script>
+    function chuyendoi() {
+        let a = parseInt(document.getElementById("met").value);
+        let b = a*3.2808;
+        document.getElementById("ketqua").innerHTML = b;
+    }
+</script>
+</body>
+</html>

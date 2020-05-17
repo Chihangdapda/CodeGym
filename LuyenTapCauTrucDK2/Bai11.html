@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="tl" type="text" value="" placeholder="trieu dong">
+    <input type="button" value="tienthue" onclick="tinhtoan()">
+    <p id="ketqua"></p>
+</form>
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("tl").value);
+        let muc1 = a*5/100;//lương từ 4-9 tr
+        let muc2 = a*10/100;//lương từ 9-14 tr
+        let muc3 = a*15/100;//lương từ 14 -24 tr
+        let muc4 = a*20/100;// lương từ 24-44 tr
+        let muc5 = a*25/100;// lương trên 44 tr
+        if (a<=4){
+            document.getElementById("ketqua").innerHTML = "không phải đóng thuế";
+        } else if (a<=9){
+            document.getElementById("ketqua").innerHTML = muc1;
+        } else if (a<=14){
+            document.getElementById("ketqua").innerHTML = muc2;
+        } else if(a<=24){
+            document.getElementById("ketqua").innerHTML = muc3;
+        } else if(a<=44){
+            document.getElementById("ketqua").innerHTML = muc4;
+        }else {
+            document.getElementById("ketqua").innerHTML = muc5;
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -6,16 +6,20 @@
 </head>
 <body>
 <form>
-    Nhập độ C:
+    Nhập cd cạnh:
     <input id="doc" type="text" value=""><br>
     <input type="button" value="summit" onclick="abc()">
-    <h3>độ F là:</h3><p id="ketqua"></p>
+    <h3>Diện Tích la:</h3><p id="ketqua"></p>
 </form>
 <script>
     function abc() {
         let a = parseInt(document.getElementById("doc").value);
-        let b = (a*1.8) + 32;
+        let b = a*a;
+        if(a > 0){
         document.getElementById("ketqua").innerHTML = b;
+        } else {
+            document.getElementById("ketqua").innerHTML = "nhập lại";
+        }
     }
 </script>
 </body>

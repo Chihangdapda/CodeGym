@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập a:
+    <input id="a" type="text" value="">
+    Nhập b:
+    <input id="b" type="text" value="">
+    <br><br>
+    <input type="button" value="giai" onclick="tinhtoan()"><br><br>
+    Nghiệm của phương trình là:
+    <p id="ketqua"></p>
+</form>
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let x = -b / a;
+        if (a === 0 && b === 0) {
+            document.getElementById("ketqua").innerText = "phương trình có vô số nghiệm";
+        } else if(a === 0 && b !==0 ){
+            document.getElementById("ketqua").innerText = "phương trình vô nghiệm";
+        } else {
+            document.getElementById("ketqua").innerText = x;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="tuoi" type="text" value="">
+    <input type="button" value="kiemtra" onclick="kiemtra()">
+    <p id="ketqua"></p>
+</form>
+<script>
+    function kiemtra() {
+        let a = parseInt(document.getElementById("tuoi").value);
+        if (a > 0 && a < 120) {
+            document.getElementById("ketqua").innerHTML = a;
+        } else
+            document.getElementById("ketqua").innerHTML = "nhập sai, vui lòng nhập lại";
+    }
+</script>
+</body>
+</html>

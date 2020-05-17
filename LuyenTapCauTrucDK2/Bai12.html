@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>tiền vay:
+    <input id="tienvay" type="text" value="" placeholder="triệu đồng">
+    Thời gian vay:
+    <input id="thang" type="text" value="" placeholder="Số tháng">
+    <input type="button" value="kiemtra" onclick="tinhtoan()">
+    <p id="ketqua"></p>
+</form>
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("tienvay").value);
+        let b = parseInt(document.getElementById("thang").value);
+        let c = a*(1+10*b/100);
+        document.getElementById("ketqua").innerHTML = c;
+    }
+</script>
+</body>
+</html>

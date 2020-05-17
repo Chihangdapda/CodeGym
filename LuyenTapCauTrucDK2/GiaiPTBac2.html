@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập a:
+    <input id="a" type="text" value="">
+    Nhập b:
+    <input id="b" type="text" value="">
+    Nhập c:
+    <input id="c" type="text" value="">
+    <br><br>
+    <input type="button" value="giai" onclick="tinh()">
+    <br><br>
+    Nghiệm của phương trình là:
+    <p id="ketqua"></p>
+    <p id="ketqua1"></p>
+</form>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        let x0 = -c / a;
+        let x1 = (-b / 2 * a);
+        if (a === 0) {
+        } else if (b === 0 && c === 0) {
+            document.getElementById("ketqua").innerHTML = "pt vô nghiệm";
+        } else if (b === 0 && c !== 0) {
+            document.getElementById("ketqua").innerHTML = x0;
+        } else {
+            let d = (b * b) - (4 * a * c);
+            let x2 = (-b / 2 - Math.sqrt(d)) / (2 * a);
+            let x3 = (-b / 2 + Math.sqrt(d)) / (2 * a);
+            if (d === 0) {
+                document.getElementById("ketqua").innerHTML = x1;
+            } else if (d > 0) {
+                document.getElementById("ketqua").innerHTML = x2 ;
+                document.getElementById("ketqua1").innerHTML = x3;
+            } else {
+                document.getElementById("ketqua").innerHTML = "pt vô nghiệm";
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
+</body>
+</html>

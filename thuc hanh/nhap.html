@@ -1,43 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Game puzzle</title>
-
+    <title>KTT</title>
 </head>
 <body>
-<form>
-    <input id="t1" type="checkbox" onclick="input1()">
-
-    <input id="t2" type="checkbox" onclick="input2()">
-
-    <input id="t3" type="checkbox" onclick="input3()"/>
-</form>
 <script>
-    let t1 = document.getElementById('t1');
-    let t2 = document.getElementById('t2');
-    let t3 = document.getElementById('t3');
-    function input1() {
-        if (t1.checked === true && t3.checked === true) {
-            if (t2.checked === true) {
-                t3.checked = false;
-            }
-        }
-    }
-    function input2() {
-        if (t2.checked === true && t1.checked === true) {
-            if (t3.checked === true) {
-                t1.checked = false;
-            }
-        }
-    }
-    function input3() {
-        if (t3.checked === true && t2.checked === true) {
-            if (t1.checked === true) {
-                t2.checked = false;
-            }
-        }
-    }
+    let a= parseInt(prompt('Nhap so tuoi'));
+    if (a>0 && a<120)
+        alert('May qua ban la con nguoi');
+    else
+        alert('Ban la nguoi ngoai hanh tinh a');
 </script>
 </body>
 </html>

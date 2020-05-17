@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="a" type="text" value="">
+    <input id="b" type="text" value="">
+    <input id="c" type="text" value="">
+    <input type="button" value="kiemtra" onclick="tinh()">
+    <p id="ketqua"></p>
+</form>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("a").value);
+        let b = parseInt(document.getElementById("b").value);
+        let c = parseInt(document.getElementById("c").value);
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b > c && a + c > b && b + c > a) {
+                document.getElementById("ketqua").innerHTML = "là tam giac";
+            } else {
+                document.getElementById("ketqua").innerText = "không là tam giác";
+            }
+        } else {
+            document.getElementById("ketqua").innerText = "không là tam giác";
+        }
+    }
+</script>
+</body>
+</html>

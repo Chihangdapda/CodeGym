@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>nhập lương:
+    <input id="sl" type="text" value="" placeholder="triệu đồng">
+    <input type="button" value="kiemtra" onclick="tinh()">
+    <p id="ketqua"></p>
+</form>
+<script>
+    function tinh() {
+        let a = parseInt(document.getElementById("sl").value);
+        let b = a * 3000
+        let c = a * 5000
+        let d = a * 10000
+        if (a > 0 && a <= 100) {
+            document.getElementById("ketqua").innerHTML = b;
+        } else if (a > 100 && a <= 500) {
+            document.getElementById("ketqua").innerHTML = c;
+        } else if (a > 500) {
+            document.getElementById("ketqua").innerHTML = d;
+        } else {
+            document.getElementById("ketqua").innerHTML = "nhập sai, vui lòng nhập lại"
+        }
+    }
+</script>
+</body>
+</html>

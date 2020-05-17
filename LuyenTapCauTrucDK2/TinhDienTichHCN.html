@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập chiều dài:
+    <input id="dai" type="text" value=""><br><br>
+    Nhập chiều rộng:
+    <input id="rong" type="text" value=""><br>
+    <input type="button" value="summit" onclick="tinhtoan()">
+    <h3>Diện tích là:</h3><p id="ketqua"></p>
+</form>
+<script>
+    function tinhtoan() {
+        let a = parseInt(document.getElementById("dai").value);
+        let b = parseInt(document.getElementById("rong").value);
+        let s = a*b;
+        document.getElementById("ketqua").innerHTML = s;
+    }
+</script>
+</body>
+</html>
