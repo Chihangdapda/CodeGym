@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            padding: 5%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            height: 300px;
+        }
+        td,table {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 20px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">BẢNG CỬU CHƯƠNG</h1>
+<script>
+  let a = "<table border='1' width='80%' style='text-align: center'>";
+    for(i = 1; i <= 10; i = i+1){
+        a = a + "<tr>";
+        for(j = 2;j <10; j = j +1){
+        a = a + '<td>' + j + ' x ' + i + ' = ' + i * j + '</td>';
+        }
+    } document.write(a);
+
+</script>
+
+</body>
+</html>
