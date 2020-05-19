@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="play()" value="play">
+</form>
+<script>
+    function play() {
+        let a = parseInt(prompt("bạn dự đoán trong khoang nào"));
+        let rd = Math.floor(Math.random() * a);
+
+        for (let i = 0; i < 5; i++) {
+            let b = parseInt(prompt("so ban du doan"));
+            if (b === rd) {
+                alert("you win");
+                break;
+            } else if (b < rd) {
+                alert("tăng lên");
+            } else {
+                alert("giảm xuống");
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
