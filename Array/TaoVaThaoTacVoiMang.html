@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input type="text" id="nhap" placeholder="nhap so"></input>
+    <input type="button" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" value="Display" onclick="display_array();"></input>
+    <div id="result"></div>
+<script>
+    let x=0;
+    let array = Array();
+    function add_element_to_array() {
+        array[x]= document.getElementById("nhap").value;
+        x++;
+        document.getElementById('nhap');
+    }
+    function display_array() {
+        let e= "<hr width='0px'>"
+        for ( let i=0;i<array.length;i++){
+            e = e + "x" + i + " = " + array[i] + "<hr>" + "<br/>";
+        }
+        document.getElementById("result").innerHTML = e;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhap" placeholder="nhap so"></input>
+    <input type="button" value="Add" onclick="add_i_to_array();"></input>
+    <p id="display"></p>
+    <input type="button" value="Daonguoc" onclick="inmang();"></input>
+</form>
+<script>
+    let i = 0;
+    let array = Array();
+
+    function add_i_to_array() {
+        array[i] = document.getElementById("nhap").value;
+        i++;
+        document.getElementById('nhap');
+        document.getElementById("display").innerHTML = array;
+    }
+
+    function inmang() {
+        let x = array;
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last) {
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        document.write(x);
+    }
+</script>
+</body>
+</html>

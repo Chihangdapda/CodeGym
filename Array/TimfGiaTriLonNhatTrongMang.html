@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="nhap so" type="text"></input>
+<input onclick="add_i_to_array();" type="button" value="Add"></input>
+<p id="display"></p>
+<input onclick="gtln();" type="button" value="timgiatrilonnhat"></input>
+<script>
+    let j = 0;
+    let array = Array();
+
+    function add_i_to_array() {
+        array[j] = document.getElementById("nhap").value;
+        j++;
+        document.getElementById('nhap');
+        document.getElementById("display").innerHTML = array;
+    }
+
+    function gtln() {
+        let x = array;
+        let max = 0;
+        let index = 0;
+        for (let i = 0; i < x.length; i++) {
+            if (x[i] > max) {
+                max = x[i];
+                index = i;
+            }
+        }
+        document.getElementById("display").innerHTML = ("max= " + max + " at position " + index);
+    }
+
+</script>
+</body>
+</html>
