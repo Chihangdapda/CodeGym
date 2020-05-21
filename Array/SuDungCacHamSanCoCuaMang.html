@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<script>
+    let myColor = ["Red", "Green", "White", "Black"];
+    document.write(myColor.toString() + "<br>");
+    document.write(myColor.join() + "<br>");
+    document.write(myColor.join('+'));
+
+</script>
+<hr>
+<br>-->
+<!--<script>
+    let x = parseInt(prompt("nhap day so"));
+    let a = x.toString();
+    let b = [a[0]];
+    for (x = 1; x < a.length; x++) {
+        if ((a[x] % 2 === 0)) {
+            b.push(a[x]+'-');
+        } else {
+            b.push(a[x]);
+        }
+    } document.write(b.join(""));
+</script>-->
+<!--<hr><br>-->
+<script>
+    str = 'cBnmKiHGitu';
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    var result = [];
+
+    for(var x=0; x<str.length; x++)
+    {
+        if(UPPER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toLowerCase());
+        }
+        else if(LOWER.indexOf(str[x]) !== -1)
+        {
+            result.push(str[x].toUpperCase());
+        }
+        else
+        {
+            result.push(str[x]);
+        }
+    }
+    document.write(result.join(''));
+</script>
+</body>
+</html>
