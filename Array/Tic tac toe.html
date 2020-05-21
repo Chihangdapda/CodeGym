@@ -7,23 +7,24 @@
 <body>
 <h3>Caro Game Simple</h3>
 <p id="carogame"/>
-<input type="button" value="Change Value" onclick="changeValue()">
+<p id="endgame"/>
 <script>
     let board = [];
     let data = "";
+    let check = true;
     for (let i = 0; i < 5; i++) {
         board[i] = new Array(".", ".", ".", ".", ".");
     }
     for (let i = 0; i < 5; i++) {
         data += "<br/>";
         for (let j = 0; j < 5; j++) {
-            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
+            data += board[i][j]+ "&nbsp;&nbsp;&nbsp;&nbsp";
         }
     }
-    data += "<br/><br/><br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+    data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
+        "<input type='button' value='play2' onclick='changeValue2()'>"
     document.getElementById("carogame").innerHTML = data;
-
-    function changeValue() {
+    function changeValue1() {
         let X = prompt("X: ");
         let Y = prompt("Y: ");
         data = "";
@@ -34,9 +35,27 @@
                 data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
             }
         }
-        data += "<br/><br/><input type='button' value='Change Value' onclick='changeValue()'>"
+        data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
+            "<input type='button' value='play2' onclick='changeValue2()'>"
+        document.getElementById("carogame").innerHTML = "<hr/>" + data;
+
+    }
+    function changeValue2() {
+        let X = prompt("X: ");
+        let Y = prompt("Y: ");
+        data = "";
+        board[X][Y] = "0";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+        data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
+            "<input type='button' value='play2' onclick='changeValue2()'>"
         document.getElementById("carogame").innerHTML = "<hr/>" + data;
     }
+
 
 </script>
 </body>
