@@ -7,11 +7,11 @@
 <body>
 <h3>Caro Game Simple</h3>
 <p id="carogame"/>
-<input type="button" value="Play1" onclick="changeValue1()">
-<input type="button" value="Play2" onclick="changeValue2()">
+<p id="endgame"/>
 <script>
     let board = [];
     let data = "";
+    let check = true;
     for (let i = 0; i < 5; i++) {
         board[i] = new Array(".", ".", ".", ".", ".");
     }
@@ -38,6 +38,7 @@
         data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
             "<input type='button' value='play2' onclick='changeValue2()'>"
         document.getElementById("carogame").innerHTML = "<hr/>" + data;
+
     }
     function changeValue2() {
         let X = prompt("X: ");
@@ -54,6 +55,7 @@
             "<input type='button' value='play2' onclick='changeValue2()'>"
         document.getElementById("carogame").innerHTML = "<hr/>" + data;
     }
+
 
 </script>
 </body>
