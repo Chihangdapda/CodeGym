@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Type anthing slowly</h2>
+<form name="f">
+    <textarea  id="test" name="txt" cols="40" rows="10" onkeydown="Type();"></textarea>
+</form>
+<script>
+    var a= new Array(),n="";
+    a[1]='I';a[2]='M';a[3]=' ';a[4]='A';a[5]=' ';a[6]='P';a[7]='R';a[8]='O';
+    a[9]='G';a[10]='R';a[11]='A';a[12]='M';a[13]='M';a[14]='E';a[15]='R';a[16]='!';a[17]='!';a[18]=' ';a[19]=' ';
+    function Type(){
+        t = document.getElementById("test").value;
+        j = t.length;
+        console.log(j);
+        if(j > 0)
+        {
+            for(var i=1; i<=j; i++)
+            {
+                n = n + a[i];
+                if(i == 19)
+                {
+                    document.getElementById("test").value = "";
+                    n = "";
+                }
+            }
+        }
+        document.getElementById("test").value = n;
+        n="";
+        setTimeout("Type()", 1);
+
+    }
+</script>
+</body>
+</html>
