@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = new Array(5, 4);
+    for (let i = 0; i < 5; i++) {
+        document.write("Row" + i + ":" + "<br>");
+        a[i] = new Array(4);
+        for (let j = 0; j < 4; j++) {
+            a[j] = Math.floor(Math.random() * 20);
+            document.write(a[j]+"<br>");
+        }
+    }
+</script>
+</body>
+</html>

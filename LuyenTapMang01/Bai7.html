@@ -29,10 +29,10 @@
         let v = parseInt(document.getElementById("nhap").value);
         for (i=0;i<a.length;i++){
             if (v === a[i]){
-                a.splice(parseInt(a[i]),1);
+                a.splice(i, 1);
+                a.push(0);
                 document.getElementById("display").innerHTML = a;
                 check = false;
-                break;
             }
         }if (check){
             document.getElementById("display2").innerHTML = "V is not in the array";
@@ -40,7 +40,5 @@
     }
 
 </script>
-</body>
-</html>
 </body>
 </html>

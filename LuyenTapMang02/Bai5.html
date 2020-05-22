@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="nhapchuoi" rows="7" cols="20"></textarea><br>
+<input onclick="taomang()" type="button" value="add">
+<input onclick="sosanh()" type="button" value="dem">
+<p id="mang"></p>
+<p id="mang2"></p>
+<p id="sotu"></p>
+<script>
+    let i = 0;
+    let a = [];
+    let check = true;
+    function taomang() {
+        a[i] = document.getElementById("nhapchuoi").value;
+        i++;
+        document.getElementById("nhapchuoi").value
+        document.getElementById("mang").innerHTML = a;
+    }
+
+    let a = new Array(5, 4);
+    for (let i = 0; i < 5; i++) {
+        document.write("Row" + i + ":" + "<br>");
+        a[i] = new Array(4);
+        for (let j = 0; j < 4; j++) {
+            a[j] = Math.floor(Math.random() * 20);
+            document.write(a[j]+"<br>");
+        }
+    }
+</script>
+</body>
+</html>

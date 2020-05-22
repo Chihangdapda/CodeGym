@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="nhapchuoi" rows="7" cols="20"></textarea><br>
+<input onclick="taomang()" type="button" value="add">
+<input onclick="demtu()" type="button" value="dem">
+<p id="mang"></p>
+<p id="sotu"></p>
+<script>
+    let a = [];
+    function taomang() {
+        let i = 0;
+        a = document.getElementById("nhapchuoi").value;
+        document.getElementById("mang").innerHTML = a;
+    }
+
+    function demtu() {
+        let tong = 0;
+        for (i = 0; i < a.length; i++) {
+            if (a[i] === " ") {
+                tong = tong + 1;
+            }
+        }
+        document.getElementById("sotu").innerHTML = tong + 1;
+    }
+</script>
+</body>
+</html>

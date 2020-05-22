@@ -22,12 +22,14 @@
             let v = parseInt(document.getElementById("nhap").value);
             for (i=0;i<a.length;i++){
                 if (v === a[i]){
-                    document.getElementById("display2").innerHTML = "V is in the array";
+                    alert("V is in the array");
+                    //document.getElementById("display2").innerHTML = "V is in the array";
                     check = false;
                     break;
                 }
             }if (check){
-                document.getElementById("display2").innerHTML = "V is not in the array";
+                alert("V is not in the array");
+                //document.getElementById("display2").innerHTML = "V is not in the array";
         }
     }
 

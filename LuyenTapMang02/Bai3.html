@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhapchuoi" type="">
+<input onclick="addArray()" type="button" value="add">
+<p id="inmang"></p>
+<p id="kichthuoc">kich thước mảng:</p>
+<p id="sokytu">số ký tự trong mảng:</p>
+<script>
+    let i = 0;
+    let a = [];
+    let c = 0;
+    function addArray() {
+        a[i] = document.getElementById("nhapchuoi").value;
+        console.log(a[i].length);
+        c = c + a[i].length;
+        console.log(a[i].length);
+        i++;
+        document.getElementById("nhapchuoi");
+        document.getElementById("inmang").innerHTML = a;
+        document.getElementById("kichthuoc").innerHTML = a.length;
+        document.getElementById("sokytu").innerHTML = c;
+    }
+</script>
+</body>
+</html>

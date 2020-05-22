@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<input id="nhap" placeholder="nhap so" type="text"></input>
-<input onclick="add_2();" type="button" value="Add"></input>
+<input id="nhap1" placeholder="nhap so" type="text"></input>
+<input onclick="add_21();" type="button" value="Add"></input>
 <p id="display"></p>
 <p id="display2"></p>
 
@@ -14,10 +14,10 @@
 <script>
     let j = 0;
     let array = Array();
-    function add_2() {
-        array[j] = document.getElementById("nhap").value;
+    function add_21() {
+        array[j] = document.getElementById("nhap1").value;
         j++;
-        document.getElementById('nhap');
+        document.getElementById('nhap1');
         document.getElementById("display").innerHTML = array;
     }
     function daonguoc() {

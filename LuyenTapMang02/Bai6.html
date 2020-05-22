@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input id="nhap" type="text" value="">
+<input onclick="nhapmang()" type="button" value="add"></input>
+<p id="display"></p>
+<input onclick="change()" type="button" value="change"></input>
+<p id="display2"></p>
+<script>
+    let a = Array();
+    let check = true;
+    let i = 0;
+
+    function nhapmang() {
+        a[i] = document.getElementById("nhap").value;
+        i++;
+        document.getElementById("nhap").value;
+        document.getElementById("display").innerHTML = a;
+    }
+
+    function change() {
+        let x = "-";
+        for (i = 0; i < a.length; i++) {
+            if (x === a[i]) {
+                a.splice(i, 1, "_");
+                document.getElementById("display").innerHTML = a;
+                check = false;
+            }
+        }
+        if (check) {
+            document.getElementById("display2").innerHTML = "không có (-)";
+        }
+    }
+
+</script>
+</body>
+</html>
+</body>
+</html>
