@@ -4,7 +4,34 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
 
+<body>
+<input onclick="add_i() " type="button" value="Add"></input>
+<p id="display"></p>
+<input onclick="search10()" type="button" value="tìm số >=10"></input>
+<p id="display2"></p>
+<script>
+    let a = Array();
+    function add_i() {
+        for (let i = 0; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 20);
+        }
+        document.getElementById("display").innerHTML = a;
+    }
+    function search10() {
+        let n = 0;
+        let num = 0;
+        for (let i = 0; i < 10; i++) {
+            if (parseInt(a[i]) >= 10) {
+                n++;
+                num = num + a[i] + ", ";
+
+
+            }document.getElementById("display2").innerHTML = ('Có ' + n + ' số >= 10 là: ' + num);
+
+        }
+    }
+
+</script>
 </body>
 </html>

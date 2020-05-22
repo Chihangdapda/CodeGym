@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="nhap so" type="text"></input>
+<input onclick="add_2();" type="button" value="Add"></input>
+<p id="display"></p>
+<p id="display2"></p>
+
+<input onclick="daonguoc() " type="button" value="daonguoc"></input>
+<script>
+    let j = 0;
+    let array = Array();
+    function add_2() {
+        array[j] = document.getElementById("nhap").value;
+        j++;
+        document.getElementById('nhap');
+        document.getElementById("display").innerHTML = array;
+    }
+    function daonguoc() {
+            for (let i=0;i<array.length;i++){
+                array.reverse().join();
+            }document.getElementById("display2").innerHTML = array;
+    }
+</script>
+</body>
+</html>

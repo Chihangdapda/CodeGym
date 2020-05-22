@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="add_i() " type="button" value="addArray"></input><br><br>
+<input id="nhap" type="text" value="">
+<p id="display"></p>
+<input onclick="searchV()" type="button" value="kiemtra"></input>
+<p id="display2"></p>
+<script>
+    let a = Array();
+    let check = true;
+    function add_i() {
+        for (let i=0;i<10;i++){
+            a[i] = Math.floor(Math.random()*20);
+        } document.getElementById("display").innerHTML = a;
+    }
+    function searchV() {
+            let v = parseInt(document.getElementById("nhap").value);
+            for (i=0;i<a.length;i++){
+                if (v === a[i]){
+                    document.getElementById("display2").innerHTML = "V is in the array";
+                    check = false;
+                    break;
+                }
+            }if (check){
+                document.getElementById("display2").innerHTML = "V is not in the array";
+        }
+    }
+
+</script>
+</body>
+</html>

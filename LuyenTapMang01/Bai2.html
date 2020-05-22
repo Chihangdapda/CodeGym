@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<input onclick="add_i() " type="button" value="Add"></input>
+<p id="display"></p>
+<p id="display1"></p>
+<input onclick="gtln2()" type="button" value="timgiatrilonnhat"></input>
+<script>
+    let a = Array ();
+    function add_i() {
+        for (let i = 0; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 10 + 1);
+        }
+        document.getElementById("display").innerHTML = a;
+    }
+    function gtln2() {
+        let max = 0;
+        let index = 0;
+        for (let i = 0; i < 10; i++) {
+            if (a[i] > max) {
+                max = a[i];
+                index = i;
+            }
+        }
+        document.getElementById("display1").innerHTML = ("max= " + max + " at position " + index);
+    }
+
+</script>
+</body>
+</html>

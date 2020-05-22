@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="add_i() " type="button" value="addArray"></input><br><br>
+<p id="display"></p>
+<input onclick="sapxep()" type="button" value="sapxep"></input>
+<p id="display2"></p>
+<script>
+    let a = Array();
+
+    function add_i() {
+        for (let i = 0; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 20);
+        }
+        document.getElementById("display").innerHTML = a;
+    }
+
+    function sapxep() {
+        for (i = 0; i < a.length; i++) {
+            a.sort(function (y, x) {
+                return x - y;
+            });
+        }document.getElementById("display2").innerHTML = a;
+    }
+
+</script>
+</body>
+</html>
+</body>
+</html>

@@ -8,9 +8,10 @@
 <input id="nhap" placeholder="nhap so" type="text"></input>
 <input onclick="add_i_to_array();" type="button" value="Add"></input>
 <p id="display"></p>
-<p id="display2"></p>
-
 <input onclick="gtln() " type="button" value="timgiatrilonnhat"></input>
+<input onclick="tbc() " type="button" value="trungbc"></input>
+<p id="display2"></p>
+<p id="display3"></p>
 <script>
     let j = 0;
     let array = Array();
@@ -30,9 +31,15 @@
                 max = array[i];
                 index = i;
             }
+            document.getElementById("display2").innerHTML = ("max= " + max + " at position " + index);
         }
-        document.getElementById("display2").innerHTML = ("max= " + max + " at position " + index);
-
+    }
+    function tbc() {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            sum = sum + parseInt(array[i]);
+        }
+        document.getElementById("display3").innerHTML = (sum / array.length);
     }
 
 </script>
