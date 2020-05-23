@@ -5,18 +5,22 @@
     <title>So_nguyen_to</title>
 </head>
 <body>
-Enter a Number:
-<input id="nhap" type="text">
-<input onclick="show1()" type="button" value="Show">
-<p id="ketqua"></p>
+
 <script>
 
-    function show1() {
-        if (n<2)
 
+    for(var i = 0; i <= 100; i++){
+        if(ktsnt(i))
+            document.write(i);
     }
-
-
+    function ktsnt(num) {
+        if(num < 2) return false;
+        for (var i = 2; i < num; i++) {
+            if(num%i==0)
+                return false;
+        }
+        return true;
+    }
 </script>
 </body>
 </html>

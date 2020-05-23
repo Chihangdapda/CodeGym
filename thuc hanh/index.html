@@ -5,15 +5,31 @@
     <title>dang nghia</title>
 </head>
 <body>
+Enter A Number
+<input id="nhap" type="text">
+<input onclick="show1()" type="button" value="Show">
+<p id="ketqua"></p>
 <script>
-    let arr = new Array(10,10);
-    for (let i = 0; i < 10; i++) {
-        arr[i] = new Array(10);
-        for (let j = 0; j < 10; j++) {
-            arr[i][j] = Math.floor(Math.random() * 10);
+    function show1() {
+        let a = document.getElementById("nhap").value;
+        let c = "";
+        for (var i = 0; i <= a; i++) {
+            if (ktsnt(i)) {
+                c = c + "  " + i;
+            }
+            document.getElementById("ketqua").innerHTML = (c);
         }
-        document.write(arr[i] + "<br>");
     }
+
+    function ktsnt(num) {
+        if (num < 2) return false;
+        for (var i = 2; i < num; i += 2) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
 </script>
 </body>
 </html>
