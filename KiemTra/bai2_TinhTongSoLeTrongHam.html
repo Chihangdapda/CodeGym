@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="addarray()" type="button" value="NewArray">
+<input onclick="searchNum()" type="button" value="TinhTongSoLe">
+<p id="display"></p>
+<p id="ketqua"></p>
+<script>
+    let a = [];
+
+    function addarray() {
+        for (let i = 0; i < 10; i++) {
+            a[i] = Math.floor(Math.random() * 20);
+        }
+        document.getElementById("display").innerHTML = a;
+    }
+
+    function searchNum() {
+        let num = 0;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] % 2 !== 0) {
+                num = num + a[i];
+            }
+            document.getElementById("ketqua").innerHTML = "Tong cac so le trong ham la:" + num;
+        }
+    }
+</script>
+</body>
+</html>

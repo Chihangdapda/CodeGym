@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Enter a Number:
+<input id="nhap" type="text">
+<input onclick="show1()" type="button" value="Show">
+<p id="ketqua"></p>
+<script>
+
+    function show1() {
+        let a = document.getElementById("nhap").value;
+        for (i=0;i<a.length;i++)
+        if (a === 1 || a === 2) {
+            document.getElementById("ketqua").innerHTML = 2;
+        }
+    }
+    /*for (let i = 2; i < Math.sqrt(a); i++) {
+        if (a % i === 0) {
+            check = false;
+            break;
+        }
+    }if (check) {
+        document.write(i);
+    }*/
+
+    /* function isCheck(a) {
+         let checked = true;
+         for (i = 2;i <= Math.sqrt(a);i++) {
+             if (a % i === 0) {
+                 checked = false;
+                 break;
+             }
+         }
+         console.log(checked);
+         return checked;
+     }*/
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="NewArray()" type="button" value="NewMatrix">
+<input onclick="tinhtong()" type="button" value="TongDuongCheoChinh">
+<p id="display"></p>
+<p id="ketqua"></p>
+<script>
+    let arr = new Array();
+    let l = "";
+
+    function NewArray() {
+        for (let i = 0; i < 5; i++) {
+            arr[i] = new Array(5);
+            for (let j = 0; j < 5; j++) {
+                arr[i][j] = Math.floor(Math.random() * 10);
+            }
+            l = l + (arr[i] + "<br>");
+        }
+        document.getElementById("display").innerHTML = l;
+    }
+
+    function tinhtong() {
+        let num = 0;
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (i === j) {
+                    num = num + arr[i][j];
+                    document.getElementById("ketqua").innerHTML = num;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

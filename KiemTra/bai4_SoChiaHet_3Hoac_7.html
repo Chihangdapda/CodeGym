@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="addarray()" type="button" value="KhoangSo">
+<input onclick="searchNum()" type="button" value="TimCacSoChiaHetCho_3Hoac_7">
+<p id="display"></p>
+<p id="ketqua"></p>
+<script>
+
+    function addarray() {
+        let x = "";
+        for (let i = 1; i <= 100; i++) {
+            x = x + " " + i;
+        }
+        document.getElementById("display").innerHTML = x;
+    }
+    function searchNum() {
+        let x = "";
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 === 0 || i % 7 === 0) {
+                x = x + " " + i;
+            }
+            document.getElementById("ketqua").innerHTML = x;
+        }
+    }
+
+</script>
+</body>
+</html>

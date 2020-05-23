@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhap nam sinh:
+<input id="nhapnamsinh" type="text" placeholder="1800-2020">
+<input onclick="tinhtuoi()" type="button" value="TinhTuoi">
+<p id="ketqua"></p>
+<script>
+    let check = true;
+    function tinhtuoi() {
+        let a = parseInt(document.getElementById("nhapnamsinh").value);
+        for (let i = 1800; i <= 2020; i++) {
+            if (a === i) {
+                x = 2020 - i;
+                document.getElementById("ketqua").innerHTML = x;
+                check = false;
+                break;
+            }
+        }
+            if (check) {
+                document.write("Khong hop le");
+            }
+    }
+</script>
+</body>
+</html>
