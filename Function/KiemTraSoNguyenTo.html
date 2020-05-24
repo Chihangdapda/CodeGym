@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dang nghia</title>
+</head>
+<body>
+Enter A Number
+<input id="nhap" type="text">
+<input onclick="show1()" type="button" value="Show">
+<p id="ketqua"></p>
+<script>
+    function show1() {
+        let a = document.getElementById("nhap").value;
+        let c = "";
+        for (var i = 0; i <= a; i++) {
+            if (ktsnt(i)) {
+                c = c + "  " + i;
+            }
+            document.getElementById("ketqua").innerHTML = (c);
+        }
+    }
+
+    function ktsnt(num) {
+        if (num < 2) return false;
+        for (var i = 2; i < num; i += 2) {
+            if (num % i == 0)
+                return false;
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>

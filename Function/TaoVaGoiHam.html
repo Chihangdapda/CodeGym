@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap a");
+    let num = checknum(a);
+    document.write(num);
+
+    function checknum(numberq) {
+        let rs = "";
+        if (numberq % 2 === 0) {
+            rs = "so chan";
+        } else rs = "so le";
+        return rs;
+    }
+
+</script>
+</body>
+</html>

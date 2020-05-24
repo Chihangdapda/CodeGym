@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>temperatureConverter</h1>
+<p>
+    <label>Fahrenheit</label>
+    <input id="inputF" type="number" placeholder="Fahrenheit">
+    <input onclick="main()" type="button" value="conver">
+
+<p>Celsius: <span id="outputCelsius"></span></p>
+<script>
+    function main() {
+        let a = document.getElementById("inputF").value;
+        let temp = convert(a);
+        document.getElementById("outputCelsius").innerHTML = temp;
+
+    function convert(temp1) {
+        c = (a - 32) / 1.8;
+        return c;
+    }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+    let a = prompt("nhap sao");
+    let x = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let y = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    let c = searchstar(x)
+    document.write(c);
+    function searchstar(star){
+        let check = true;
+        for (i = 0; i < x.length; i++) {
+            if (a === x[i]) {
+                return y[i];
+                break;
+            }
+        }
+        if (check) {
+           let r = "khong thay"
+            return r;
+        }
+    }
+
+
+</script>
+</body>
+</html>

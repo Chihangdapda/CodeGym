@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="hang" type="text">
+<input onclick="add3()" type="button" value="AddArray">
+<input onclick="search()" type="button" value="SearchMinNumber"><br>
+new Array:
+<p id="display"></p>
+MinValue:
+<p id="ketqua"></p>
+<script>
+    let a = Array();
+    function add3() {
+        let x = parseInt(document.getElementById("hang").value);
+        for (let i = 0; i < x; i++) {
+            a[i] = Math.floor(Math.random() * 20);
+        }
+        document.getElementById("display").innerHTML = a;
+    }
+
+    function search() {
+            let min = minArray(a);
+            document.getElementById("ketqua").innerHTML = min;
+        function minArray(arr) {
+            let min = arr[0];
+            for(var i = 1; i < a.length; i++){
+                if(a[i] < min){
+                    min = a[i];
+                }
+            }
+            return min;
+        }
+        }
+</script>
+</body>
+</html>
