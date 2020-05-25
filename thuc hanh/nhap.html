@@ -5,28 +5,35 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<input onclick="addstr()" type="button" value="addnewstr">
+<p id="display"></p>
+<input id="nhapkt" type="text">
+<input onclick="search(nhapkt.value)" type="button" value="search">
+<p id="ketqua"></p>
 <body>
-<h1>Chuyển đổi từ feet sang meters:</h1>
-<input type="text" id="feet"/>
-<button type="button" onclick="footToMeter(feet.value)">click</button>
-<div id="txt"></div>
-<h1>Chuyển đổi từ meters sang feet:</h1>
-<input type="text" id="meter"/>
-<button type="button" onclick="meterToFoot(meter.value)">click</button>
-<div id="txt1"></div>
 <script>
-    function footToMeter(meter) {
-        let n = parseInt(meter);
-        let feet = 0;
-        feet = n * 0.305;
-        document.getElementById('txt').innerHTML = n + ' meter = ' + feet + ' feet'
+    let text = new Array();
+
+    function addstr() {
+        let chuoi = "QAZWSXEDCRFVTGBYHNUJMIKOLPqazwsxedcrfvtgbyhnujmikolp1234567890";
+        for (let i = 0; i < chuoi.length; i++) {
+            text[i] = chuoi.charAt(Math.floor(Math.random() * (chuoi.length-10)));
+
+        }
+        document.getElementById("display").innerHTML = text;
     }
 
-    function meterToFoot(feet) {
-        let n = parseInt(feet);
-        let meter = 0;
-        meter = n * 3.279
-        document.getElementById('txt1').innerHTML = n + ' feet = ' + meter + ' meter'
+    function search(x) {
+        let y = 0;
+        for (let i = 0; i < text.length; i++) {
+            if (x === text[i]) {
+                y++;
+            }
+            document.getElementById("ketqua").innerHTML = "so lan xuat hien" + y;
+        } if (y<=0){
+            document.getElementById("ketqua").innerHTML = -1;
+        }
+
     }
 </script>
 </body>
