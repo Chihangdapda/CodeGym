@@ -4,7 +4,27 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
 
+chuyen doi meet sang feet:
+<input id="meet" type="text">
+<input onclick="exchangemeet(meet.value)" type="button" value="Exchange">
+<p id="ketqua1"></p>
+chuyen doi feet sang meet:
+<input id="feet" type="text">
+<input onclick="exchangefeet(feet.value)" type="button" value="Exchange">
+<p id="ketqua2"></p>
+<body>
+<script>
+    function exchangemeet(meet) {
+        let a = parseInt(meet);
+        let fee = a*0.305;
+        document.getElementById("ketqua1").innerHTML = fee;
+    }
+    function exchangefeet(feet) {
+        let a = parseInt(feet);
+        let met = a*3.279;
+        document.getElementById("ketqua2").innerHTML = met;
+    }
+</script>
 </body>
 </html>
