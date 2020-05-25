@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="chieudai" type="text" placeholder="nhapso">
+<input onclick="add()" type="button" value="addnewArray">
+<input onclick="doicho()" type="button" value="daonguoc">
+<p id="array"></p>
+<p id="daonguocarr"></p>
+<script>
+
+    let a = new Array();
+    function add() {
+        let x = parseInt(document.getElementById("chieudai").value);
+        for (let i = 0; i < x; i++) {
+            a[i] = Math.floor(Math.random() * 10);
+        }
+        document.getElementById("array").innerHTML = a;
+    }
+    function doicho() {
+        a.reverse().join();
+        document.getElementById("daonguocarr").innerHTML = a;
+    }
+</script>
+</body>
+</html>

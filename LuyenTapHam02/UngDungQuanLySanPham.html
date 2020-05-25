@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="addsp" type="text" placeholder="ten san pham">
+<input onclick="add()" type="button" value="themsanpham">
+</body>
+
+
+</table>
+<script>
+
+    let sp = ["a", "b", "c", "d", "e", "f", "g", "k", "l", "m", "n"];
+        let a = "<table border='1' width='80%' style='text-align: center'>";
+        for (i = 0; i < sp.length; i++) {
+            a = a + "<tr>";
+            for (j = 0; j < 3; j++) {
+                if (j === 0) {
+                    a = a + '<td>' + sp[i] + '</td>';
+                }
+                if (j === 1) {
+                    a = a + '<td>' + "<input type='button' value='edit'/>" + '</td>';
+                }
+                if (j === 2) {
+                    a = a + '<td>' + "<input  type='button' value='delete'>" + '</td>';
+                }
+            }
+    } document.write(a);
+
+    function add() {
+        let sp = ["a", "b", "c", "d", "e", "f", "g", "k", "l", "m", "n"];
+        let s = document.getElementById("addsp").value;
+        sp.unshift(s);
+        let a = "<table border='1' width='80%' style='text-align: center'>";
+        for (i = 0; i < sp.length; i++) {
+            a = a + "<tr>";
+            for (j = 0; j < 3; j++) {
+                if (j === 0) {
+                    a = a + '<td>' + sp[i] + '</td>';
+                }
+                if (j === 1) {
+                    a = a + '<td>' + "<input type='button' value='edit'/>" + '</td>';
+                }
+                if (j === 2) {
+                    a = a + '<td>' + "<input  type='button' value='delete'>" + '</td>';
+                }
+            }
+        }document.write(a);
+    }
+    function chage() {
+       let f = prompt("nhap");
+
+    }
+    function delet() {
+
+    }
+
+</script>
+</html>

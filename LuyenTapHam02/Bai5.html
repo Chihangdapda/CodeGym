@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap so thu nhat"));
+    let b = parseInt(prompt("nhap so thu hai"));
+    let c = parseInt(prompt("nhap so thu ba"));
+    let max = searchmax(a,b,c);
+    document.write(max);
+    function searchmax(num) {
+        let max = a;
+        if (b>a){
+            b=max;
+            if (b>c){
+                return b;
+            } return c;
+        }if (a<c){
+            return c;
+        } return a;
+    }
+</script>
+</body>
+</html>

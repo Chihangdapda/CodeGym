@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input onclick="addnum()" type="button" value="addnum">
+<input onclick="doicho()" type="button" value="doicho">
+<p id="daonguoc1"></p>
+<p id="ketqua"></p>
+<script>
+    let a = new Array(2)
+    function addnum(){
+        for (let i=0;i<2;i++){
+        a[i]=Math.floor(Math.random()*10);
+        }
+        document.getElementById("daonguoc").innerHTML = a;
+    }
+    function doicho(){
+    a.reverse().join();
+    document.getElementById("ketqua").innerHTML = a;
+    }
+</script>
+</body>
+</html>

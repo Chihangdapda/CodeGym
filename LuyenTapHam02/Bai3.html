@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("nhap so nguyen"));
+    let c = giaithua(a);
+    document.write(c);
+
+    function giaithua(songuyen) {
+        if (a > 2) {
+            let gt = 1;
+            for (let i = 2; i <= a; i++) {
+                gt = gt * i;
+            }return gt;
+        } else if (a === 1 || a === 2) {
+            let gt = 1;
+            return gt;
+        } else{
+            let gt = "nhap sai";
+            return gt;
+        }
+    }
+
+</script>
+</body>
+</html>
