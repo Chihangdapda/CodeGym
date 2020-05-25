@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-
+<input id="nhaptu" type="text">
+<input onclick="kiemtra(nhaptu.value)" type="button" value="kiemtra">
+<p id="ketqua"></p>
+<script>
+    function kiemtra(chuoi) {
+        let str = document.getElementById("nhaptu").value;
+        for (let i=0;i<str.length;i++){
+            if (str[i]=== str[str.length-1-i]){
+                document.getElementById("ketqua").innerHTML = "doi xung";
+            } else
+                document.getElementById("ketqua").innerHTML = "khong doi xung";
+        }
+    }
+</script>
 </body>
 </html>

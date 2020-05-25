@@ -18,12 +18,15 @@
     for (let i = 0; i < 5; i++) {
         data += "<br/>";
         for (let j = 0; j < 5; j++) {
-            data += board[i][j]+ "&nbsp;&nbsp;&nbsp;&nbsp";
+            data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp";
         }
     }
-    data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
+    data += "<br/><br/><br/><br/>" +
+        "<input type='button' value='play1' onclick='changeValue1()'>" +
         "<input type='button' value='play2' onclick='changeValue2()'>"
     document.getElementById("carogame").innerHTML = data;
+
+
     function changeValue1() {
         let X = prompt("X: ");
         let Y = prompt("Y: ");
@@ -38,6 +41,7 @@
         data += "<br/><br/><br/><br/><input type='button' value='play1' onclick='changeValue1()'>" +
             "<input type='button' value='play2' onclick='changeValue2()'>"
         document.getElementById("carogame").innerHTML = "<hr/>" + data;
+
 
     }
     function changeValue2() {
