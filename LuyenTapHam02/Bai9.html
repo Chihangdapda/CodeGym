@@ -1,13 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<input onclick="addstr()" type="button" value="addnewstr">
+<p id="display"></p>
+<input id="nhapkt" type="text">
+<input onclick="search(nhapkt.value)" type="button" value="search">
+<p id="ketqua"></p>
 <body>
-<input>
 <script>
+    let text = new Array();
 
+    function addstr() {
+        let chuoi = "QAZWSXEDCRFVTGBYHNUJMIKOLPqazwsxedcrfvtgbyhnujmikolp1234567890";
+        for (let i = 0; i < chuoi.length; i++) {
+            text[i] = chuoi.charAt(Math.floor(Math.random() * (chuoi.length-10)));
+
+        }
+        document.getElementById("display").innerHTML = text;
+    }
+
+    function search(x) {
+        let y = 0;
+        for (let i = 0; i < text.length; i++) {
+            if (x === text[i]) {
+                y++;
+            }
+            document.getElementById("ketqua").innerHTML = "so lan xuat hien" + y;
+        } if (y<=0){
+            document.getElementById("ketqua").innerHTML = -1;
+        }
+
+    }
 </script>
 </body>
-</html>
+</html> 
