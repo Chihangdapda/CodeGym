@@ -2,34 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>dang nghia</title>
+    <title>Title</title>
 </head>
 <body>
-Enter A Number
-<input id="nhap" type="text">
-<input onclick="show1()" type="button" value="Show">
-<p id="ketqua"></p>
 <script>
-    function show1() {
-        let a = document.getElementById("nhap").value;
-        let c = "";
-        for (var i = 0; i <= a; i++) {
-            if (ktsnt(i)) {
-                c = c + "  " + i;
-            }
-            document.getElementById("ketqua").innerHTML = (c);
-        }
-    }
 
-    function ktsnt(num) {
-        if (num < 2) return false;
-        for (var i = 2; i < num; i += 2) {
-            if (num % i == 0)
-                return false;
-        }
-        return true;
-    }
+    let Human = function (name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.getName = function () {
+            return this.name;
+        };
+        this.setName = function () {
+            this.name = name;
+        };
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.setWeight = function () {
+            this.weight = weight;
+        };
+        this.Say = function (string) {
+            alert(this.string);
+        };
+        this.Eat = function (apple) {
+            if (apple.weight > 0) {
+                this.weight++;
+                apple.decrease();
+            } else alert("Hết táo rồi !");
+        };
+        this.checkApple = function (apple) {
+            return apple.isEmpty();
+        };
+    };
+    let Apple = function (weight) {
+        this.weight = 10;
+        this.getWeight = function () {
+            return this.weight;
+        };
+        this.isEmpty = function () {
+            if (this.weight > 0) return true;
+            else return false;
+        };
+        this.decrease = function () {
+            if (this.weight > 0) this.weight--;
+        };
+    };
+    let apple = new Apple();
+    let adam = new Human("Quỳnh", "nam", 55);
+    let eva = new Human("Tâm", "nữ", 45);
 
+    alert(adam.checkApple(apple));
+    alert(adam.Eat(apple));
+    alert(adam.getName() + adam.getWeight() + apple.getWeight());
+    // alert(adam);
+    // alert(eva.Eat(apple));
+    // alert(eva);
+    // eva.Say("No cá đi mất");
 </script>
 </body>
 </html>

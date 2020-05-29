@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="radi">
+<input type="button" onclick="radi1()" value="tinh S va C">
+<p id="ketqua"></p>
+<script>
+
+        let Circle = function (radius) {
+            this.radius = radius;
+
+            this.getradius = function () {
+                return radius;
+            }
+            this.getArea = function () {
+                return Math.PI * radius * radius;
+            }
+
+            this.getCircuit = function () {
+                return Math.PI * radius * 2;
+            }
+        }
+        function radi1(){
+        let circle = new Circle(radi.value);
+        let radius = circle.getradius();
+        let area = circle.getArea();
+        let circuit = circle.getCircuit();
+        document.write("radius:" + radius + "<br> area:" + area + "<br> circuit:" + circuit);
+        }
+
+</script>
+</body>
+</html>

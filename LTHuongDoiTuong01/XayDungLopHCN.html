@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="dientich"></p>
+<p id="chuvi"></p>
+<canvas id="myCanvas" width="700px" height="370px" style="border:5px solid #d3d3d3;"/>
+
+<script>
+
+    let hcn = function (x, y, width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+        this.x = x;
+        this.y = y;
+
+        this.draw = function () {
+            let hcn = document.getElementById("myCanvas").getContext("2d");
+            hcn.fillStyle = this.color;
+            hcn.fillRect(this.x, this.y, this.width, this.height, this.color);
+        }
+
+        this.area = function () {
+            return (this.width * this.height);
+        }
+        this.circuit = function () {
+            return (2 * (this.width + this.height));
+        }
+
+    }
+
+    function choino() {
+        rec = new hcn(10, 10, 200, 80, "red");
+        rec.draw();
+        document.getElementById("dientich").innerHTML = rec.area();
+        document.getElementById("chuvi").innerHTML = rec.circuit();
+
+    }
+
+    choino();
+
+</script>
+</body>
+</html>

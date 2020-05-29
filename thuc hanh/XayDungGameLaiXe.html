@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="400" height="700" style="border: 5px solid #d3d3d3"></canvas>
+<script>
+    let myGameArea = {
+        canvas: document.getElementById("canvas"),
+        start: function () {
+            this.context = this.canvas.getContext("2d");
+            this.interval = setInterval(updateGameArea, 20);
+            // bat su kien ban phim
+            window.addEventListener('keydown', function (e) {
+                myGameArea.keys = (myGameArea.keys || []);
+                myGameArea.keys[e.keyCode] = true;
+            });
+            window.addEventListener('keyup', function (e) {
+                myGameArea.keys[e.keyCode] = false;
+            });
+        },
+        // xoa man hinh de ve lai
+        clear: function () {
+            this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        }
+    }
+</script>
+</body>
+</html>

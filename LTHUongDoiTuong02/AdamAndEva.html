@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Apple = function () {
+        this.apweight = 10;
+
+        this.getApweight = function () {
+            return this.apweight;
+        };
+        this.decreaSeap = function () {
+            if (this.apweight > 0)
+                return this.apweight--;
+            else return this.apweight = 0;
+        };
+    }
+
+    var Human = function (name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+
+        this.getName = function () {
+            return this.name;
+        }
+
+        this.getGender = function () {
+            if (this.gender === "male") {
+                return "male";
+            } else if (this.gender === "female")
+                return "female";
+        };
+
+        this.getWeight = function () {
+            return this.weight;
+        };
+
+        this.setName = function (name) {
+            this.name = name;
+        };
+
+        this.setGender = function (gender) {
+            this.gender = gender;
+        };
+
+        this.setWeight = function (weight) {
+            this.weight = weight;
+        };
+
+
+        this.say = function () {
+            return 'Hello! I am:' + this.name + " " + 'Gender:' + this.gender + " " +
+                'weight:' + this.weight;
+        };
+        this.adamSay = function () {
+            return "Anh ăn nhé: "
+        }
+        this.evaSay = function () {
+            return "em ăn nhé: "
+        }
+        this.eatApple = function (apple) {
+            return apple.decreaSeap();
+        }
+    }
+
+    let apple = new Apple();
+    let adam = new Human('Adam', 'male', 70);
+    document.write(adam.say() + "<br>");
+    let eva = new Human('Eva', 'female', 47);
+    document.write(eva.say() + "<br>" + "<hr>");
+    for (i = 0; i < 5; i++) {
+        document.write(adam.adamSay());
+        document.write(adam.eatApple(apple) + " ");
+        document.write("AdamWeight=" + adam.weight++ + "<br>");
+        document.write(eva.evaSay() + " ");
+        document.write(eva.eatApple(apple) + " ");
+        document.write("EvaWeight=" + eva.weight++ + "<br>");
+    }
+</script>
+</body>
+</html>

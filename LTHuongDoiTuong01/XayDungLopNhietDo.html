@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhapnhietdo" type="text" placeholder="nhapnhietdo">
+<input onclick="nhietdo()" type="button" value="chuyendoi">
+<p id="doC"></p>
+<p id="doF"></p>
+<p id="doK"></p>
+<script>
+    let temp = function (c) {
+        this.c = c;
+
+        this.dof = function () {
+            return (c * 1.8 + 32);
+        }
+        this.dok = function () {
+            return (c + 273.15);
+        }
+
+    }
+    function nhietdo() {
+        let d=new temp(parseInt(document.getElementById("nhapnhietdo").value));
+        document.getElementById("doC").innerHTML = parseInt(document.getElementById("nhapnhietdo").value);
+        document.getElementById("doF").innerHTML = d.dof();
+        document.getElementById("doK").innerHTML = d.dok();
+    }
+
+</script>
+</body>
+</html>

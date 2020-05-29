@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<input id="nhaptu" type="text">
+<input id="nhaptu" type="text" placeholder="nhap chuoi">
 <input onclick="kiemtra(nhaptu.value)" type="button" value="kiemtra">
 <p id="ketqua"></p>
 <script>
@@ -17,6 +17,7 @@
             } else
                 document.getElementById("ketqua").innerHTML = "khong doi xung";
         }
+        document.getElementById("nhaptu").value = null;
     }
 </script>
 </body>
