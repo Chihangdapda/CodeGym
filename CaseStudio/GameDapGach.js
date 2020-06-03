@@ -1,22 +1,20 @@
 var canvas = document.getElementById("game");
 var context = canvas.getContext("2d");
-
+//vẽ nền bắt đầu
 context.beginPath();
 let img = document.createElement("img");
 img.src = "background.png";
 context.drawImage(img, 0, 0, 1000, 500);
 context.closePath();
 
-const DEFAULT_X_POSITION = 20;
-const DEFAULT_Y_POSITION = 470;
 var bong = {
-    x: DEFAULT_X_POSITION,
-    y: DEFAULT_Y_POSITION,
+    x: 20,
+    y: 470,
     dx: 4,
     dy: 3,
     radius: 7
 };
-
+//thanh chắn bóng
 var rect1 = {
     width: 170,
     height: 15,
@@ -37,10 +35,6 @@ var gach = {
     totalrow: 7,
     totalcol: 12,
 };
-var gameover = false;
-var gamewin= false;
-var score=0;
-var maxscore = gach.totalrow*gach.totalcol;
 
 var Dsgach = [];
 for (let i = 0; i < gach.totalrow; i++) {
@@ -53,7 +47,12 @@ for (let i = 0; i < gach.totalrow; i++) {
     }
 }
 
-
+//check game và tính điểm
+var gameover = false;
+var gamewin= false;
+var score=0;
+var maxscore = gach.totalrow*gach.totalcol;
+//vẽ bóng
 function drawball() {
     context.beginPath();
     let img = document.createElement("img");
@@ -61,7 +60,7 @@ function drawball() {
     context.drawImage(img,bong.x, bong.y, bong.radius*2, bong.radius*2);
     context.closePath();
 }
-
+//bắt sự kiện điều khiển thanh chắn
 document.addEventListener("keyup", function (event) {
     if (event.keyCode == 37) {
         rect1.isMoveleft = false;
@@ -79,7 +78,7 @@ document.addEventListener("keydown", function (event) {
     }
 
 });
-
+//vẽ nền game
 function drawbackground() {
     context.beginPath();
     let img = document.createElement("img");
@@ -87,7 +86,7 @@ function drawbackground() {
     context.drawImage(img, 0, 0, 1000, 500);
     context.closePath();
 }
-
+//vẽ thanh chắn
 function drawrect1() {
     context.beginPath();
     let img = document.createElement("img");
@@ -95,7 +94,7 @@ function drawrect1() {
     context.drawImage(img,rect1.x, rect1.y, rect1.width, rect1.height);
     context.closePath();
 }
-
+//vẽ gạch
 function drawrect2() {
     Dsgach.forEach(function (b) {
         if (!b.ttgach) {
@@ -107,7 +106,7 @@ function drawrect2() {
         }
     });
 }
-
+//logic bóng va chạm thành
 function vacham() {
     if (bong.x < bong.radius*2 || bong.x > canvas.width - bong.radius*2) {
         bong.dx = -bong.dx;
@@ -116,14 +115,14 @@ function vacham() {
         bong.dy = -bong.dy;
     }
 }
-
+//bóng va chạm thanh chắn
 function vacham2() {
     if (bong.x + bong.radius*2 >= rect1.x && bong.x + bong.radius*2 <= rect1.x + rect1.width &&
         bong.y + bong.radius*2 >= canvas.height - rect1.height) {
         bong.dy = -bong.dy;
     }
 }
-
+//bóng va chạm gạch
 function vachamgach() {
     Dsgach.forEach(function (b) {
         if (!b.ttgach) {
@@ -143,7 +142,7 @@ function vachamgach() {
 }
 
 
-
+//di chuyển của thanh chắn
 function dichuyenrect1() {
     if (rect1.isMoveleft) {
         rect1.x -= rect1.speed;
@@ -157,17 +156,18 @@ function dichuyenrect1() {
         rect1.x = canvas.width - rect1.width;
     }
 }
-
+//di chuyển quả bóng
 function dichuyen() {
     bong.x += bong.dx;
     bong.y += bong.dy;
 }
-
+//kiểm tra trạng thái game
 function checkgameover() {
     if (bong.y > canvas.height - bong.radius) {
         gameover = true;
     }
 }
+//kiểm tra và vẽ màn hình game win hoặc lose
 function handleGameOver() {
     if (gamewin){
         context.beginPath();
@@ -183,6 +183,7 @@ function handleGameOver() {
         context.closePath();
     }
 }
+//tải lại trang web
 function reset() {
     window.location.reload();
 }
