@@ -172,7 +172,7 @@ function handleGameOver() {
     if (gamewin){
         context.beginPath();
         let img = document.createElement("img");
-        img.src = "background2.png";
+        img.src = "youWin.png";
         context.drawImage(img, 0, 0, 1000, 500);
         context.closePath();
     } else if (gameover){
