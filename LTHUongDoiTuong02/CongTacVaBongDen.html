@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<input onclick="turnOn1()" type="button" value="bât">
+
+<input onclick="turnOff1()" type="button" value="tắt">
+<div id="turn"></div>
+<script>
+    this.Bongden = function () {
+
+        this.bong = function () {
+            if (this.status) {
+                document.getElementById("turn").innerHTML = "sang";
+            } else
+                document.getElementById("turn").innerHTML = "toi";
+        }
+        this.getBat = function () {
+            this.status = true;
+        }
+        this.getTat = function () {
+            this.status = false;
+        }
+    }
+    let rangdong = new Bongden();
+    function turnOn1() {
+        rangdong.getBat();
+        rangdong.bong();
+    }
+    function turnOff1() {
+        rangdong.getTat();
+        rangdong.bong();
+    }
+
+</script>
+</body>
+</html>

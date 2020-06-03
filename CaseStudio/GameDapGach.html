@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="load()">
+<style>
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        
+    }
+    .button1 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        margin-top: 10px;
+        margin-left: 450px;
+    }
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        margin-top: 10px;
+        margin-left: 450px;
+    }
+    .button2:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+
+<canvas id="game" style="border:3px solid #101c5d " width="1000" height="500" ></canvas>
+<button onclick="draw()" class="button button1" id="btnStart">BẮT ĐẦU</button>
+<button class="button button2" id="Score"></button>
+<button onclick="reset()" class="button button1" id="btnAgain">Chơi lại</button>
+
+<script src="GameDapGach.js">
+</script>
+</body>
+</html>

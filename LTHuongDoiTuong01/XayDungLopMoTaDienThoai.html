@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="editor" type="text" placeholder="new msg">
+<script>
+    this.Mobile = function (name,pin,msg,inbox,outbox,status) {
+        this.nam=name;
+        this.pin = pin;
+        this.msg = msg;
+        this.inbox = inbox;
+        this.outbox = outbox;
+        this.status = status;
+
+        this.getPin = getPin();
+        this.getMsg = getMsg;
+        this.getInbox = getInbox;
+        this.getOutbox = getOutbox;
+        this.getStatus = getStatus;
+        
+        function getPin() {
+            if (pin>0){
+                this.pin--;
+            }
+        };
+        function getMsg() {
+            this.msg = document.getElementById("editor").value;
+        };
+
+
+    }
+</script>
+</body>
+</html>
