@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" type="text" value="" placeholder="nhap so nguyen">
+<input onclick="isFibonaci()" type="button" value="check number"></input>
+<p id="ketqua"></p>
+
+<script>
+
+
+        function isFibonaci() {
+            let n = document.getElementById("nhap").value;
+            if (n<=1){
+
+                document.getElementById("ketqua").innerHTML= "so thuoc chuoi fibonaci";
+            } else {
+                if (n === ((n-2) + (n-1))){
+                    document.getElementById("ketqua").innerHTML= "so thuoc chuoi fibonaci";
+                }else
+
+                document.getElementById("ketqua").innerHTML= "so khong thuoc chuoi fibonaci";
+            }
+        }
+
+
+</script>
+</body>
+</html>

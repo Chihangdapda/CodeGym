@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" placeholder="nhap diem" type="text"></input>
+<input onclick="add_array();" type="button" value="Add"></input>
+<p id="display"></p>
+<p id="display2"></p>
+<input onclick="findMax() " type="button" value="findmax"></input>
+<script>
+    let i = 0;
+    let array = Array();
+    function add_array() {
+        array[i] = document.getElementById("nhap").value;
+        i++;
+        document.getElementById('nhap');
+        document.getElementById("display").innerHTML = array;
+    }
+
+    function findMax() {
+        let max = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+            document.getElementById("display2").innerHTML = max;
+        }
+    }
+</script>
+</body>
+</html>

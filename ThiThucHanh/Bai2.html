@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="nhap" type="text" value="" placeholder="nhap phan tu so nguyen">
+<input onclick="add_Array()" type="button" value="add"></input>
+<input id="nhapX" type="text" value="" placeholder="nhap x">
+<input onclick="tryRemoveFromArray()" type="button" value="try"></input>
+<p id="display"></p>
+<p id="display2"></p>
+<script>
+    let a = Array();
+    let i = 0;
+    let check=true;
+
+    function add_Array() {
+        a[i] = document.getElementById("nhap").value;
+        i++;
+        document.getElementById("nhap").value;
+        document.getElementById("display").innerHTML = a;
+    }
+
+    function tryRemoveFromArray() {
+        let x =  document.getElementById("nhapX").value;
+        for (i = 0; i < a.length; i++) {
+            if (x === a[i]) {
+                a.splice(i, 1);
+                document.getElementById("display").innerHTML = "New array:" + a;
+                check = false;
+            }
+        } if (check) {
+            document.getElementById("display2").innerHTML = a;
+        }
+    }
+</script>
+</body>
+</html>
